@@ -1,4 +1,4 @@
-# SistemaDeGerenciamentoDeFichasOPRPG
+# Apresentando: Sistema De Gerenciamento De Fichas OPRPG
 
   É bom ter um ReadMe, né? Nesse caso, vou começar apresentando um pouco o projeto. 
   Inicialmente, a ideia era desenvolver um sistema de gerenciamento de fichas para RPGs de mesa, depois eu comecei a focar especificamente no sistema de Ordem Paranormal para o desenvolvimento do código-fonte. 
