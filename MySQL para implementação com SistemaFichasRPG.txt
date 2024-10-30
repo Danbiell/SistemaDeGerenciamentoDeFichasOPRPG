@@ -132,8 +132,3 @@ b. Descobrir e decidir como modificar bônus de perícias com base na relação 
 	--> tal relação é indefinida, e não sei como vou fazer. Pensei inicialmente em algo como uma
 		relação tal qual: Inventário (1:2) - - (1:N) Perícias // mas a mesma é confusa e ESQUISIITA
         --> FEITA! Professor explicou direitinho e isso vai ser feito durante execução do JAVA
-
-
-
-
-
