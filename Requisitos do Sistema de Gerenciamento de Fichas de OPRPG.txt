@@ -1,0 +1,67 @@
+Menu (acessar opções desejadas):
+	-> Criar Ficha
+		. Puxar para a criação de uma nova ficha
+	-> Abrir Ficha
+		. Ver ficha, rolar dados e adicionar ou alterar valores
+	-> Deletar Ficha
+		. Com confirmação do usuário
+	-> Encerrar Programa
+		. Com confirmação do usuário
+
+
+Criar ficha (preencher dados de forma personalizável):
+	-> Dados como:
+	   
+		Gerais:
+		.str nome
+		.str criador
+		.int nivel
+		.int NEX
+		.int valFOR
+		.int valAGI
+		.int valVIG
+		.int valINT
+		.int valPRE
+		.str origem
+		.str descOrigem
+		.str classe
+		.int PV
+		.int PE
+		.int SAN
+		.int idade
+		.str historico
+		.str hobbies
+
+		Perícias:
+		.char 26 treinamento<nome_da_pericia>
+		.int 26 bonus<nome_da_pericia>
+
+		Inventario:
+		.str nome
+		.str tipo
+		.str aprimoramentos
+		.int peso
+		.int categoria
+		.int pericia1
+		.int bonusPer1
+		.int pericia2
+		.int bonusPer2
+		.str descricao
+
+	-> Os dados deverão ser preenchidos na ordem que o usuário desejar, tendo apenas uma opção de recomendação de direção (opção que direcione a criação de ficha do usuário).
+
+
+Visualizar ficha criada:
+	-> Abrir menu que ajude na navegação e divida a ficha em sessões (uma sessão de atributos, perícias e rolagens, outro de pontos de saúde, inventário, etc). Incluso um modo de edição de ficha
+
+	-> Rolagem de dados através da ficha (sessão de atributos e perícias)
+	
+	-> Opção para entrar em modo de edição de ficha, onde atributos, perícias, etc. podem ser alterados pelo usuário que tem a ficha.
+
+Salvar dados num banco de dados:
+	-> Aprender a fazer isso. Por enquanto, ir deixando o código em Java limpo e organizado, criando um objeto para cada personagem em cada classe.
+
+
+Futuras expansões:
+	-> Exportação e Importação de fichas de personagens;
+	-> Seleção de inventário e poderes com poderes já definidos e criados;

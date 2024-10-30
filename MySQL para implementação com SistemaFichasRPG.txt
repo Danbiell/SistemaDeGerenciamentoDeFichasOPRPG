@@ -1,0 +1,139 @@
+-- BANCO DE DADOS PARA SISTEMA DE GERENCIAMENTO DE FICHAS (JAVA)
+
+create database if not exists Gerenciamento_Fichas_OrdemRPG;
+
+use Gerenciamento_fichas_ordemrpg;
+
+show tables;
+
+create table if not exists PersonagensGeral (
+id_ficha int not null primary key auto_increment,
+nome varchar(45) not null,
+nome_criador varchar(45),
+nivel int not null,
+nex int not null,
+FORCA int(1) not null,
+AGILIDADE int(1) not null,
+VIGOR int(1) not null,
+INTELECTO int(1) not null,
+PRESENCA int(1) not null,
+origem varchar(45) not null,
+-- origem_desc varchar(500) not null,
+-- adicionar essa linha quando houver reforma no código (alterar atualmente necessitaria muitas mudanças)
+classe varchar(20) not null,
+pv int(3) not null,
+pe int(3) not null,
+san int(3) not null,
+idade int(3),
+historico varchar(600),
+hobbies varchar(200)
+);
+
+describe PersonagensGeral;
+select * from PersonagensGeral;
+
+create table if not exists Pericias (
+id_pericias int not null auto_increment primary key,
+AcrobaciaTreinamento char(1) not null default('N'),
+AdestramentoTreinamento char(1) not null default('N'),
+ArtesTreinamento char(1) not null default('N'),
+AtletismoTreinamento char(1) not null default('N'),
+AtualidadesTreinamento char(1) not null default('N'),
+CiênciasTreinamento char(1) not null default('N'),
+CrimeTreinamento char(1) not null default('N'),
+DiplomaciaTreinamento char(1) not null default('N'),
+EnganaçãoTreinamento char(1) not null default('N'),
+FortitudeTreinamento char(1) not null default('N'),
+FurtividadeTreinamento char(1) not null default('N'),
+IntimidaçãoTreinamento char(1) not null default('N'),
+IntuiçãoTreinamento char(1) not null default('N'),
+InvestigaçãoTreinamento char(1) not null default('N'),
+LutaTreinamento char(1) not null default('N'),
+MedicinaTreinamento char(1) not null default('N'),
+OcultismoTreinamento char(1) not null default('N'),
+PercepçãoTreinamento char(1) not null default('N'),
+PontariaTreinamento char(1) not null default('N'),
+ProfissãoTreinamento char(1) not null default('N'),
+ReflexosTreinamento char(1) not null default('N'),
+ReligiãoTreinamento char(1) not null default('N'),
+SobrevivênciaTreinamento char(1) not null default('N'),
+TáticaTreinamento char(1) not null default('N'),
+TecnologiaTreinamento char(1) not null default('N'),
+VontadeTreinamento char(1) not null default('N'),
+
+AcrobaciaBonus int(2) not null default(0),
+AdestramentoBonus int(2) not null default(0),
+ArtesBonus int(2) not null default(0),
+AtletismoBonus int(2) not null default(0),
+AtualidadesBonus int(2) not null default(0),
+CiênciasBonus int(2) not null default(0),
+CrimeBonus int(2) not null default(0),
+DiplomaciaBonus int(2) not null default(0),
+EnganaçãoBonus int(2) not null default(0),
+FortitudeBonus int(2) not null default(0),
+FurtividadeBonus int(2) not null default(0),
+IntimidaçãoBonus int(2) not null default(0),
+IntuiçãoBonus int(2) not null default(0),
+InvestigaçãoBonus int(2) not null default(0),
+LutaBonus int(2) not null default(0),
+MedicinaBonus int(2) not null default(0),
+OcultismoBonus int(2) not null default(0),
+PercepçãoBonus int(2) not null default(0),
+PontariaBonus int(2) not null default(0),
+ProfissãoBonus int(2) not null default(0),
+ReflexosBonus int(2) not null default(0),
+ReligiãoBonus int(2) not null default(0),
+SobrevivênciaBonus int(2) not null default(0),
+TáticaBonus int(2) not null default(0),
+TecnologiaBonus int(2) not null default(0),
+VontadeBonus int(2) not null default(0)
+);
+
+describe pericias;
+select * from pericias;
+
+insert into pericias values (
+
+);
+
+delete from pericias where id_pericias = 1;
+
+create table if not exists Inventario (
+id_item int not null auto_increment primary key,
+nome_item varchar(45) not null,
+tipo_item varchar(20) not null,
+aprimoramentos varchar(30),
+peso int(2) not null,
+categoria int(1) not null,
+pericia1 varchar(15),
+bonusPericia1 int(2),
+pericia2 varchar(15),
+bonusPericia2 int(2),
+descricao varchar(500)
+-- chave estrangeira derivada de id_ficha (para que um personagem tenha vários itens)
+);
+
+describe inventario;
+select * from inventario;
+
+show tables;
+
+-- create table if not exists Poderes (
+-- incompleto int
+-- );
+
+/*
+
+A FAZER: 
+
+a. Descobrir como implementar relações e chave estrangeira (para relação entre inventário e personagens)
+	--> tal relação será descrita como: Inventário (n:1) Personagens
+b. Descobrir e decidir como modificar bônus de perícias com base na relação entre inventário e perícias
+	--> tal relação é indefinida, e não sei como vou fazer. Pensei inicialmente em algo como uma
+		relação tal qual: Inventário (1:2) - - (1:N) Perícias // mas a mesma é confusa e ESQUISIITA
+        --> FEITA! Professor explicou direitinho e isso vai ser feito durante execução do JAVA
+
+
+
+
+

@@ -1,0 +1,80 @@
+MainFunction (C) (metodos uteis) (C) {
+Main (M)
+ValidInput (M)
+ValidNums (M)
+
+
+Menu (C) (redirecionamento) {
+Menu (M) 
+
+
+FichaCriar (C) (direcionar criação e gerais) {
+(nome = null)
+(criador = null)
+(nivel = null)
+(nex = null)
+(origem = null)
+(descOrigem = null)
+(classe = null)
+(forca = null)
+(agilidade = null)
+(vigor = null)
+(intelecto = null)
+(presenca = null)
+(qtdPontosRestantes = null)
+(pv = null)
+(pe = null)
+(san = null)
+(historico = null)
+(hobbies = null)
+(idade = null)
+
+MenuCriarFicha (M)
+direcionar os caba pela criação
+ter indicativo do que foi feito
+impedir por requisito
+desabilitar impedimentos
+
+MenuGerais (nome, nivel, NEX, etc) (M)
+criar objeto
+definir variaveis em valor para objeto
+permitir visualização do que é possível colocar, quais informações já foram colocadas e quais ainda não
+
+}
+
+
+AtributosDefinir (C) {
+(forca = 1)
+(agilidade = 1)
+(vigor = 1)
+(intelecto = 1)
+(presenca = 1)
+(valPts = null)
+
+AtributoMenuDistribuir (M)
+distribuir os pontos e servir de ponte para os métodos
+
+AtributoDiminuir (M) 
+reduzir ponto de atributo
+
+AtributoValid (M)
+responsável por ver se distribuição ou diminuição são adequados
+
+}
+
+PericiasDefinir (C) {
+
+
+}
+
+InventarioDefinir (C) {
+
+
+}
+
+FichaVer (C)
+metodos desconhecidos
+
+
+FichaDeletar (C)
+metodos desconhecidos

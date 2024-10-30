@@ -1,0 +1,47 @@
+IMPORTANTE!!
+
+	-> No SQL, haverão as entidades (previstas) PersonagensGeral, Inventarios e Perícias. Haverá, também, uma classe para definir os atributos (porém estes serão salvos em PersonagensGeral)
+
+
+1. Começar pela programação do método main
+	-> Fazer ponte entre as classes MainFunction e Menu (criar objeto);
+	-> Programar ValidIntervalo (M) em MainFunction (C);
+	-> Programar ValidInput (M) em MainFunction (C);
+		-- no fim, ValidIntevalo e ValidInput foram unidos em um único método ValidNums
+
+2. Programar Menu
+	-> Preparar o Menu para estar sempre em loop e fazer ponte entre:
+	  - FichaCriar (C)
+	  - FichaVer (C)
+	  - FichaDeletar (C)
+
+3. Programar Criação de Ficha
+	-> Definir atributos gerais para a classe e conforme definir valores, salvar no objeto
+	-> Criar menu de visualização. O menu deve:
+	  - Mostrar o que já foi feito
+	  - Impedir que o personagem insira antes dados que só podem ser preenchidos com outros dados (como atributos, perícias, etc)
+	  - Permitir que o bloqueio de opções seja interrompido (liberdade total de edição)
+
+	-> Desenvolver MenuGerais (M), que deve:
+	  - Criar uma instância da classe
+	  - Mostrar opções que já têm valores
+	  - Permitir navegação entre os atributos
+	  - Definir valores para os atributos (nome, etc)
+
+	-> Desenvolver Classe de Atributos 
+	  - Distribuição de atributos (automatica ou manual)
+	  - Diminuição de atributos
+	  - Método de validação na distribuição
+	  - Devolver valor de atributos de maneira correta e devolver para o objeto
+
+4. Fazer integração com SGBD (MySQL) e salvar dados em tempo real
+	-> ???
+
+5.1. Programar Visualização de Ficha (em setores) e Acessar Dados em Tempo Real
+	-> ???
+
+5.2. Programar Edição de Ficha (em setores) e Modificar Dados em Tempo Real
+	-> ???
+
+5.3. Programar Apagamento de Ficha
+	-> ???
